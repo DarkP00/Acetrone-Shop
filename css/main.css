@@ -88,6 +88,18 @@ nav ul{
     font-size: var(--fs-b);
     width: fit-content;
 }
+.x{
+    display: none;
+}
+.img{
+    width: 320px;
+    object-fit: cover;
+}
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .right img{
     width: 400px;
     object-fit: cover;
@@ -107,6 +119,7 @@ nav ul{
     display: flex;
     flex-wrap: wrap;
     gap: var(--gap-n);
+    justify-content: center;
 }
 .card {
     width: 220px;
@@ -149,12 +162,14 @@ nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 100px 20vw;
+    margin: 100px auto;
     padding: var(--gap-n);
     background-color: var(--clr-d);
     color: var(--clr-b);
-    gap: 100px;
+    gap: 20px;
     border-radius: 20px;
+    flex-wrap: wrap;
+    min-width: fit-content;
 }
 .ctatxt{
     display: flex;
@@ -163,6 +178,7 @@ nav ul{
 }
 .ctatxt h5{
     font-size: var(--fs-b);
+    text-wrap: nowrap;
 }
 a.ctabtn{
     border: 2px solid var(--clr-b);
@@ -181,4 +197,30 @@ footer{
     background-color: var(--clr-a);
     padding: 20px 10vw;
 }
-
+@media screen and (max-width: 430px) {
+    .right{
+        display: none;
+    }
+    .x{
+        display: flex;
+    }
+}
+@media screen and (max-width: 1048px) {
+    .right{
+        display: none;
+    }
+    .x{
+        display: flex;
+    }
+    .x img{
+        width: 60vw;
+        min-width: 320px;
+        object-fit: cover;
+    }
+    .hero {
+        text-align: center;
+    }
+    .left{
+        align-items: center;
+    }
+}
